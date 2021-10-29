@@ -13,6 +13,7 @@
 ## Team Members :v:
 - 👤[Santosh Mane](https://github.com/santoshmcode)
 - 👤[Mohit Maurya](https://github.com/MohitMaurya)
+- 👤[Susanth PS](https://github.com/SushanthPS)
 
 <br>
 
