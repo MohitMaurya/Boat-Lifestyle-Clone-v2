@@ -357,7 +357,7 @@ export default function TopProductDisplay() {
     console.log(e);
     useEffect(() => {
         getData();
-    }, []);
+    });
 
     const starsArray = new Array(e.rating).fill(0);
     const [index, setIndex] = useState(0);

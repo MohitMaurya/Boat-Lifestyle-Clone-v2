@@ -176,7 +176,7 @@ export function Collections() {
 
     useEffect(() => {
         getData();
-    }, [collectionName]);
+    });
 
     return (
         <Container>
