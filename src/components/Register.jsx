@@ -147,7 +147,7 @@ export function Register() {
 
     const postData = async () => {
         try {
-            await axios.post("http://localhost:3002/users", data);
+            await axios.post("https://boat-lifestyle-api.herokuapp.com/users", data);
             setFlag(true);
         } catch (e) {
             alert("Invalid Input");

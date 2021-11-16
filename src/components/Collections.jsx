@@ -142,7 +142,7 @@ export function Collections() {
     const title = getTitle(collectionName);
 
     const getData = async () => {
-        const res = await axios.get("http://localhost:3002/products");
+        const res = await axios.get("https://boat-lifestyle-api.herokuapp.com/products");
         let temp = res.data.filter((el) => el.category === catName);
         setData(temp);
     };

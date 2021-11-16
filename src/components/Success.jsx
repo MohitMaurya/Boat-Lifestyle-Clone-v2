@@ -124,7 +124,7 @@ export function Success() {
     
     const removeCart = async () => {
         const id = localStorage.getItem("id");
-        await axios.patch(`http://localhost:3002/users`, {
+        await axios.patch(`https://boat-lifestyle-api.herokuapp.com/users`, {
             _id: id,
             cart: []
         })

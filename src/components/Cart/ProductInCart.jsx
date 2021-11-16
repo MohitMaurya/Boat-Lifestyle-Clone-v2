@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const Container = styled.div`
 `;
@@ -111,7 +113,7 @@ export default function ProductInCart({total,setTotal}) {
     }
     
     const getUser = async (id) => {
-        const res = await axios.get(`http://localhost:3002/users/${id}`);
+        const res = await axios.get(`https://boat-lifestyle-api.herokuapp.com/users/${id}`);
         setCart(res.data.cart);
         setQuantity(new Array(res.data.cart.length).fill(1));
     }

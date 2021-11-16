@@ -4,6 +4,7 @@ import { Chatbot } from "./Chatbot";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+
 const Container = styled.div`
     margin-left: auto;
     margin-right: auto;
@@ -163,7 +164,7 @@ export function Champions() {
     const [data, setData] = useState([]);
 
     const getData = async () => {
-        const res = await axios.get("http://localhost:3002/champions");
+        const res = await axios.get(`https://boat-lifestyle-api.herokuapp.com/champions`);
         setData(res.data);
     };
 

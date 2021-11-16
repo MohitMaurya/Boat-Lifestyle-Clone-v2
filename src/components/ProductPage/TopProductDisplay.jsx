@@ -349,7 +349,7 @@ export default function TopProductDisplay() {
     const [e, setE] = useState(temp);
 
     const getData = async () => {
-        const res = await axios.get("http://localhost:3002/products");
+        const res = await axios.get("https://boat-lifestyle-api.herokuapp.com/products");
         const temp = res.data;
         const ele = temp.filter((el) => el.name === productName);
         setE(ele[0]);
@@ -378,10 +378,10 @@ export default function TopProductDisplay() {
     const addToCart = async () => {
         setBtn("ADDED TO CART");
         const id = localStorage.getItem("id");
-        const res = await axios.get(`http://localhost:3002/users/${id}`);
+        const res = await axios.get(`https://boat-lifestyle-api.herokuapp.com/users/${id}`);
         const user = res.data;
         user.cart.push(e);
-        await axios.patch(`http://localhost:3002/users`, {
+        await axios.patch(`https://boat-lifestyle-api.herokuapp.com/users`, {
             _id: id,
             cart: user.cart
         })

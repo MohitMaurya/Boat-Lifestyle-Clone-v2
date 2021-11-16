@@ -262,7 +262,7 @@ export function Login() {
     const [forgotPass, setForgotPass] = useState("first");
 
     const getData = async () => {
-        const res = await axios.get("http://localhost:3002/users");
+        const res = await axios.get("https://boat-lifestyle-api.herokuapp.com/users");
         setData(res.data);
     };
 
